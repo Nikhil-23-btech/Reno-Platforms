@@ -1,0 +1,158 @@
+/* Common reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f7f9fc;
+}
+
+/* Container */
+.addschool-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.addschool-container:hover {
+  transform: translateY(-3px);
+}
+
+.addschool-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs */
+.addschool-container form input[type="text"],
+.addschool-container form input[type="email"],
+.addschool-container form input[type="tel"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 15px;
+}
+
+.addschool-container form input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.3);
+}
+
+/* Custom File Input */
+.file-input-wrapper {
+  position: relative;
+  margin: 10px 0;
+}
+
+.file-input-wrapper input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-input-label {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  background: #f1f3f6;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 15px;
+  color: #555;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.file-input-label:hover {
+  background: #e7ecf3;
+  border-color: #4a90e2;
+  color: #333;
+}
+
+/* Image preview */
+.preview-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.preview-container img {
+  width: 150px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  margin-top: 5px;
+  transition: transform 0.3s ease;
+}
+
+.preview-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Button */
+.addschool-container form button {
+  width: 100%;
+  padding: 12px;
+  background: #4a90e2;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.addschool-container form button:hover {
+  background: #357abd;
+  transform: scale(1.02);
+}
+
+.addschool-container form button:disabled {
+  background: #a0c4f7;
+  cursor: not-allowed;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .addschool-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .preview-container img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .addschool-container {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  .addschool-container h2 {
+    font-size: 20px;
+  }
+
+  .addschool-container form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
